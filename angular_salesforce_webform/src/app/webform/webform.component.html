@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +9,99 @@
   </head>
   <body class="flex flex-row justify-center m-auto bg-slate-600 h-[100vh]">
     <form
-      action=""
+      action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+      method="POST"
       class="flex flex-col w-1/2 items-center mt-5 bg-slate-700 p-5"
     >
       <h1 class="text-white text-4xl underline mb-5">
         Salesforce visitor webform
       </h1>
-      <label for="name" value="name" class="m-2 text-white">Your Name: </label>
+      <!-- from salesforce genrator -->
+      <input type="hidden" name="oid" value="00D3C00000053Ae" />
+      <!--
+      <input type="hidden" name="debug" value="1" />
+      <input
+        type="hidden"
+        name="debugEmail"
+        value="r0831309@student.thomasmore.be"
+      /> -->
+
+      <input
+        type="hidden"
+        name="retURL"
+        value="https://salesforce-group4-form.netlify.app/thankyou"
+      />
+
+      <label for="first_name">First Name</label
+      ><input
+        id="first_name"
+        maxlength="40"
+        name="first_name"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="last_name">Last Name</label
+      ><input
+        id="last_name"
+        maxlength="80"
+        name="last_name"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="company">Company</label
+      ><input
+        id="company"
+        maxlength="40"
+        name="company"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="00N3C000006QrEC">VAT Number:</label>
+      <input
+        id="00N3C000006QrEC"
+        maxlength="12"
+        name="00N3C000006QrEC"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="email">Email</label
+      ><input
+        id="email"
+        maxlength="80"
+        name="email"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="phone">Phone</label
+      ><input
+        id="phone"
+        maxlength="40"
+        name="phone"
+        size="20"
+        type="text"
+      /><br />
+
+      Product Interest:<select
+        id="00N3t00000HBbpb"
+        name="00N3t00000HBbpb"
+        title="Product Interest"
+      >
+        <option value="">--None--</option>
+        <option value="GC1000 series">GC1000 series</option>
+        <option value="GC5000 series">GC5000 series</option>
+        <option value="GC3000 series">GC3000 series</option></select
+      ><br />
+
+      <label for="description">Description</label
+      ><textarea name="description"></textarea><br />
+
+      <!-- my form -->
+      <!-- <label for="name" value="name" class="m-2 text-white">Your Name: </label>
       <input
         type="text"
         name="name"
@@ -61,7 +148,12 @@
         type="text"
         name="additional"
         class="outline outline-1 rounded m-2 w-full"
-      ></textarea>
+      ></textarea> -->
+      <input
+        type="submit"
+        value="Submit"
+        class="bg-slate-500 rounded outline outline-1 px-5 p-3 text-3xl hover:bg-slate-600 hover:cursor-pointer"
+      />
     </form>
   </body>
 </html>
