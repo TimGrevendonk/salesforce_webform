@@ -32,64 +32,76 @@
         value="https://salesforce-group4-form.netlify.app/thankyou"
       />
 
-      <label for="first_name">First Name</label
+      <label for="first_name" class="m-2 text-white">First Name</label
       ><input
         id="first_name"
         maxlength="40"
         name="first_name"
         size="20"
         type="text"
+        class="outline outline-1 rounded m-2 w-full"
       /><br />
 
-      <label for="last_name">Last Name</label
+      <label for="last_name" class="m-2 text-white">Last Name</label
       ><input
         id="last_name"
         maxlength="80"
         name="last_name"
         size="20"
         type="text"
+        class="outline outline-1 rounded m-2 w-full"
       /><br />
 
-      <label for="company">Company</label
+      <label for="company" class="m-2 text-white">Company</label
       ><input
         id="company"
         maxlength="40"
         name="company"
         size="20"
         type="text"
+        class="outline outline-1 rounded m-2 w-full"
       /><br />
 
-      <label for="00N3C000006QrEC">VAT Number:</label>
+      <label for="00N3C000006QrEC" class="m-2 text-white">VAT Number:</label>
       <input
         id="00N3C000006QrEC"
         maxlength="12"
         name="00N3C000006QrEC"
         size="20"
         type="text"
-      /><br />
+        class="outline outline-1 rounded m-2 w-full"
+        required
+      />
+      <p class="text-gray-500">(must be 2 characters and 10 digits!)</p>
+      <br />
 
-      <label for="email">Email</label
+      <label for="email" class="m-2 text-white">Email</label
       ><input
         id="email"
         maxlength="80"
         name="email"
         size="20"
         type="text"
+        class="outline outline-1 rounded m-2 w-full"
       /><br />
 
-      <label for="phone">Phone</label
+      <label for="phone" class="m-2 text-white">Phone</label
       ><input
         id="phone"
         maxlength="40"
         name="phone"
         size="20"
         type="text"
+        class="outline outline-1 rounded m-2 w-full"
       /><br />
-
-      Product Interest:<select
+      <label for="00N3t00000HBbpb" class="m-2 text-white"
+        >Product Interest:</label
+      >
+      <select
         id="00N3t00000HBbpb"
         name="00N3t00000HBbpb"
         title="Product Interest"
+        class="outline outline-1 rounded m-2 w-full"
       >
         <option value="">--None--</option>
         <option value="GC1000 series">GC1000 series</option>
@@ -97,8 +109,12 @@
         <option value="GC3000 series">GC3000 series</option></select
       ><br />
 
-      <label for="description">Description</label
-      ><textarea name="description"></textarea><br />
+      <label for="description" class="m-2 text-white">Description</label
+      ><textarea
+        name="description"
+        class="outline outline-1 rounded m-2 w-full"
+      ></textarea
+      ><br />
 
       <!-- my form -->
       <!-- <label for="name" value="name" class="m-2 text-white">Your Name: </label>
