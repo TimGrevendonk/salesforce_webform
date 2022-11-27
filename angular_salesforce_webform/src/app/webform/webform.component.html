@@ -8,15 +8,16 @@
     <title>salesforce Form</title>
   </head>
 
-  <script>
-    function updateRetURL(input) {
-      document.getElementById("retURL").value =
-        "https://my.wordpress.com/page?email=" + input.value;
-    }
-  </script>
-
   <body class="flex flex-row justify-center m-auto bg-slate-600 h-[100vh]">
+    <div *ngIf="isSubmitted">
+      <h1 class="text-white text-4xl underline mb-5">
+        Salesforce visitor webform
+      </h1>
+      <h2 class="text-white text-4xl underline mb-5">submitted</h2>
+    </div>
+
     <form
+      (ngSubmit)="onSubmit()"
       action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
       target="_self"
       method="POST"
@@ -38,7 +39,7 @@
       <input
         type="hidden"
         name="retURL"
-        value="https://salesforce-group4-form.netlify.app/thankyou"
+        value="https://salesforce-group4-form.netlify.app"
       />
 
       <label for="first_name" class="m-2 text-white">First Name</label
