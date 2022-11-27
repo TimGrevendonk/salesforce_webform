@@ -8,7 +8,7 @@
     <title>salesforce Form</title>
   </head>
 
-  <body class="flex flex-row justify-center m-auto bg-slate-600 h-[100vh]">
+  <body class="flex flex-row justify-center m-auto bg-slate-600 min-h-[100vh]">
     <div *ngIf="isSubmitted">
       <h1 class="text-white text-4xl underline mb-5">
         Salesforce visitor webform
@@ -41,6 +41,8 @@
         name="retURL"
         value="https://salesforce-group4-form.netlify.app"
       />
+
+      <input id="lead_source" type="hidden" name="lead_source" value="Web" />
 
       <label for="first_name" class="m-2 text-white">First Name</label
       ><input
